@@ -1,11 +1,10 @@
 package com.designpattern.iterator;
 
 public class CarModels {
-	
+
 	private String name;
-	
-	public CarModels(String name)
-	{
+
+	public CarModels(String name) {
 		super();
 		this.name = name;
 	}
@@ -18,7 +17,4 @@ public class CarModels {
 		this.name = name;
 	}
 
-	
-	
-	
 }

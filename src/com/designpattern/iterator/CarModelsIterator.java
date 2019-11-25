@@ -1,14 +1,14 @@
 package com.designpattern.iterator;
 
 public class CarModelsIterator implements CarIterator<CarModels> {
-	
+
 	private CarModels[] carmodels;
 	private int position = 0;
 
-	 public CarModelsIterator(CarModels[] models) {
+	public CarModelsIterator(CarModels[] models) {
 		this.carmodels = models;
 	}
-	
+
 	@Override
 	public void reset() {
 		position = 0;
@@ -17,7 +17,7 @@ public class CarModelsIterator implements CarIterator<CarModels> {
 
 	@Override
 	public CarModels next() {
-		
+
 		return carmodels[position++];
 	}
 
@@ -28,9 +28,7 @@ public class CarModelsIterator implements CarIterator<CarModels> {
 
 	@Override
 	public boolean hasNext() {
-		 if(position >= carmodels.length)
-	            return false;
-	        return true;
+		return !(position >= carmodels.length);
 	}
 
 }

@@ -1,11 +1,13 @@
 package com.designpattern.adapter;
-import com.designpattern.model.*;
 
-public class ManualtoAutomaticAdapter implements AutomaticCar{
-	
-	
+import com.designpattern.constants.DesignPatternConstants;
+import com.designpattern.model.AutomaticCar;
+import com.designpattern.model.ManualCar;
+
+public class ManualtoAutomaticAdapter implements AutomaticCar {
+
 	ManualCar anyCar;
-	
+
 	public ManualtoAutomaticAdapter(ManualCar car) {
 		this.anyCar = car;
 		engineService();
@@ -16,25 +18,27 @@ public class ManualtoAutomaticAdapter implements AutomaticCar{
 
 	@Override
 	public void engineService() {
-		System.out.println("updating engine to change the manual car to automatic");
-		
+		System.out.println("Updating engine to change the" + DesignPatternConstants.MANUAL_CAR + "to"
+				+ DesignPatternConstants.AUTOMATIC_CAR);
+
 	}
 
 	@Override
 	public void accelerate() {
-		System.out.println("updating engine to change the accleration box to automatic");		
+		System.out.println("Updating engine to change the" + DesignPatternConstants.ACCLERATING + "to"
+				+ DesignPatternConstants.AUTOMATIC_CAR);
 	}
 
 	@Override
 	public void service() {
-		System.out.println("Adapting engine to automatic");	
-		
+		System.out.println("Adapting engine to" + DesignPatternConstants.AUTOMATIC_CAR);
+
 	}
 
 	@Override
 	public void fixAutomatedGearBox() {
-		System.out.println("Changing gearbox to automatic");
-		
+		System.out.println("Changing gearbox to" + DesignPatternConstants.AUTOMATIC_CAR);
+
 	}
 
 }
